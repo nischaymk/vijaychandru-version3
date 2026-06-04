@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Publications - Vijay Chandru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<base target="_blank">
+</head>
+<body>
+    <div class="page-container publications-page">
+
+        <nav class="top-nav">
+            <a href="index.html" class="logo">Vijay Chandru</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="personal.html">Personal</a>
+                <a href="transformational.html">Transformational</a>
+                <a href="publications.html" class="active">Publications</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <main class="page-content publications-content">
+            <div class="publications-header">
+                <h1>Publications</h1>
+                <div class="header-line"></div>
+                <p style="text-align:justify; margin-top:0.5rem; color:var(--text-secondary); max-width:600px; margin-left:auto; margin-right:auto;">Exploring the intersection of computational science, health equity, and leadership in affordable therapeutic innovation.</p>
+            </div>
+
+            <!-- Responsive PDF Viewer -->
+            <div class="pdf-viewer-container">
+                <!-- Toolbar -->
+                <div class="viewer-toolbar">
+                    <div class="toolbar-left">
+                        <span class="doc-title">Vijay Chandru - Complete Publications</span>
+                        <span class="doc-subtitle">Academic Papers, Reports, Essays & Speeches</span>
+                    </div>
+                    <div class="toolbar-right">
+                        <button class="tool-btn" id="prevPage" aria-label="Previous page">
+                            <i class="fas fa-chevron-left"></i> <span class="btn-text">Prev</span>
+                        </button>
+                        <span class="page-indicator" id="pageIndicator">
+                            <span id="currentPageNum">1</span> / <span id="totalPagesNum">226</span>
+                        </span>
+                        <button class="tool-btn" id="nextPage" aria-label="Next page">
+                            <span class="btn-text">Next</span> <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="toolbar-divider"></div>
+                        <button class="tool-btn" id="zoomOutBtn" aria-label="Zoom Out">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                        <span class="zoom-level" id="zoomLevel">100%</span>
+                        <button class="tool-btn" id="zoomInBtn" aria-label="Zoom In">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                        <button class="tool-btn" id="downloadBtn" aria-label="Download PDF">
+                            <i class="fas fa-download"></i> <span class="btn-text">Download</span>
+                        </button>
+                        <button class="tool-btn" id="fullscreenBtn" aria-label="Fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PDF Canvas Container - Responsive -->
+                <div class="pdf-canvas-wrapper" id="pdfCanvasWrapper">
+                    <div class="pdf-canvas-container" id="pdfCanvasContainer">
+                        <canvas id="pdfCanvas" class="pdf-canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div class="pdf-loading" id="pdfLoading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading PDF document...
+                </div>
+
+                <!-- Mobile Navigation Controls -->
+                <div class="mobile-nav-controls">
+                    <button class="mobile-nav-btn" id="mobilePrevBtn">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <span class="mobile-page-info">Page <span id="mobileCurrentPage">1</span> of <span id="mobileTotalPages">226</span></span>
+                    <button class="mobile-nav-btn" id="mobileNextBtn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Additional Publications List -->
+            <div class="additional-pubs">
+                <h3 style="margin-bottom:1rem;">Other Publications</h3>
+                <div class="pubs-grid">
+                    <div class="pub-card-small">
+                        <div class="pub-thumb"><i class="fas fa-file-alt"></i></div>
+                        <div class="pub-info">
+                            <h4>Strand and Avadis</h4>
+                            <p>A Story of Technology Leadership from India</p>
+                            <a href="#" class="pub-link" onclick="downloadSpecificPDF('Strand_and_Avadis.pdf')">Download →</a>
+                        </div>
+                    </div>
+                    <div class="pub-card-small">
+                        <div class="pub-thumb"><i class="fas fa-file-alt"></i></div>
+                        <div class="pub-info">
+                            <h4>Strand 3.0</h4>
+                            <p>Harvesting a Dream for a Billion People</p>
+                            <a href="#" class="pub-link" onclick="downloadSpecificPDF('Strand_3.0.pdf')">Download →</a>
+                        </div>
+                    </div>
+                    <div class="pub-card-small">
+                        <div class="pub-thumb"><i class="fas fa-file-alt"></i></div>
+                        <div class="pub-info">
+                            <h4>The Simputer: Technology with Heart</h4>
+                            <p>Technology with a social conscience</p>
+                            <a href="#" class="pub-link" onclick="downloadSpecificPDF('Simputer_Essay.pdf')">Download →</a>
+                        </div>
+                    </div>
+                    <div class="pub-card-small">
+                        <div class="pub-thumb"><i class="fas fa-file-alt"></i></div>
+                        <div class="pub-info">
+                            <h4>Atal Innovation Mission Report</h4>
+                            <p>Expert Committee on Innovation & Entrepreneurship</p>
+                            <a href="#" class="pub-link" onclick="downloadSpecificPDF('AIM_Report.pdf')">Download →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer-dense">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">VC</span>
+                    <p>Vijay Chandru</p>
+                </div>
+                <div class="footer-links">
+                    <a href="personal.html">Personal</a>
+                    <a href="transformational.html">Transformational</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Google Scholar"><i class="fab fa-google"></i></a>
+                    <a href="#" aria-label="News"><i class="fas fa-newspaper"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Professor Vijay Chandru. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
